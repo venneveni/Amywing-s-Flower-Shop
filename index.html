@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amywing's Garden – Luxury Flower Bouquets</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ════════════════════════════════════════
+       LOADER
+  ════════════════════════════════════════ -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-petals">
+        <span>🌸</span><span>🌹</span><span>🌷</span>
+      </div>
+      <div class="loader-name">Amywing's Garden</div>
+      <div class="loader-bar-track"><div class="loader-bar-fill" id="loaderBar"></div></div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════
+       FLOATING PARTICLES
+  ════════════════════════════════════════ -->
+  <div id="particles" aria-hidden="true"></div>
+
+  <!-- ════════════════════════════════════════
+       NAVIGATION
+  ════════════════════════════════════════ -->
+  <nav id="navbar">
+    <div class="nav-container">
+
+      <!-- Logo -->
+      <a href="#home" class="nav-logo">
+        <span class="logo-icon">🌸</span>
+        <span class="logo-text" id="logoText">Amywing's Garden</span>
+      </a>
+
+      <!-- Desktop Links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home"       class="nav-link">Home</a></li>
+        <li><a href="#categories" class="nav-link">Categories</a></li>
+        <li><a href="#products"   class="nav-link">Bouquets</a></li>
+        <li><a href="#about"      class="nav-link">About</a></li>
+        <li><a href="#contact"    class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+
+        <!-- Search -->
+        <div class="search-wrap">
+          <button class="icon-btn" id="searchToggleBtn" aria-label="Search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          </button>
+          <div class="search-dropdown" id="searchDropdown">
+            <input type="text" id="searchInput" placeholder="Search bouquets…" autocomplete="off"/>
+            <div id="searchResults" class="search-results"></div>
+          </div>
+        </div>
+
+        <!-- Wishlist -->
+        <button class="icon-btn" id="wishlistBtn" aria-label="Wishlist">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+          <span class="badge" id="wishlistCount">0</span>
+        </button>
+
+        <!-- Cart -->
+        <button class="icon-btn" id="cartBtn" aria-label="Cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          <span class="badge" id="cartCount">0</span>
+        </button>
+
+        <!-- Theme Toggle -->
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle dark/light mode">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+        </button>
+
+        <!-- Hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#home"       class="mobile-link">Home</a>
+      <a href="#categories" class="mobile-link">Categories</a>
+      <a href="#products"   class="mobile-link">Bouquets</a>
+      <a href="#about"      class="mobile-link">About</a>
+      <a href="#contact"    class="mobile-link">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ════════════════════════════════════════
+       HERO
+  ════════════════════════════════════════ -->
+  <section id="home" class="hero">
+    <!-- Floating floral decorations -->
+    <span class="floral f1" aria-hidden="true">🌸</span>
+    <span class="floral f2" aria-hidden="true">🌹</span>
+    <span class="floral f3" aria-hidden="true">🌷</span>
+    <span class="floral f4" aria-hidden="true">🌻</span>
+    <span class="floral f5" aria-hidden="true">🌺</span>
+    <span class="floral f6" aria-hidden="true">🌼</span>
+    <span class="floral f7" aria-hidden="true">💐</span>
+    <span class="floral f8" aria-hidden="true">🌸</span>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal" id="heroEyebrow">Est. 2024 · Hand-crafted with love</p>
+      <h1 class="hero-title reveal" id="heroTitle">
+        Where Every Bloom<br/><em>Tells a Story</em>
+      </h1>
+      <p class="hero-sub reveal" id="heroSubtitle">
+        Discover luxury flower bouquets curated for every occasion — romantic anniversaries, joyful graduations, and heartfelt celebrations.
+      </p>
+      <div class="hero-btns reveal">
+        <a href="#products" class="btn-primary">Shop Bouquets</a>
+        <a href="#categories" class="btn-ghost">Browse Categories</a>
+      </div>
+    </div>
+
+    <!-- Scroll arrow -->
+    <div class="hero-scroll" aria-hidden="true">
+      <span>Scroll</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       CATEGORIES
+  ════════════════════════════════════════ -->
+  <section id="categories" class="categories-section">
+    <div class="section-header reveal">
+      <p class="section-tag">Browse by Style</p>
+      <h2 class="section-title" id="categoriesTitle">Our Collections</h2>
+      <p class="section-sub" id="categoriesSub">Find the perfect bouquet for every emotion and occasion</p>
+    </div>
+
+    <div class="categories-grid">
+      <button class="cat-card reveal active" data-cat="All">
+        <div class="cat-icon">💐</div>
+        <span>All Bouquets</span>
+      </button>
+      <button class="cat-card reveal" data-cat="Romantic">
+        <div class="cat-icon">🌹</div>
+        <span>Romantic</span>
+      </button>
+      <button class="cat-card reveal" data-cat="Graduation">
+        <div class="cat-icon">🎓</div>
+        <span>Graduation</span>
+      </button>
+      <button class="cat-card reveal" data-cat="Tulips">
+        <div class="cat-icon">🌷</div>
+        <span>Tulips</span>
+      </button>
+      <button class="cat-card reveal" data-cat="Roses">
+        <div class="cat-icon">🌸</div>
+        <span>Roses</span>
+      </button>
+      <button class="cat-card reveal" data-cat="Sunflowers">
+        <div class="cat-icon">🌻</div>
+        <span>Sunflowers</span>
+      </button>
+      <button class="cat-card reveal" data-cat="Custom">
+        <div class="cat-icon">✨</div>
+        <span>Custom</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       PRODUCTS
+  ════════════════════════════════════════ -->
+  <section id="products" class="products-section">
+    <div class="section-header reveal">
+      <p class="section-tag">Hand-Picked</p>
+      <h2 class="section-title">Our Bouquets</h2>
+      <p class="section-sub">Each arrangement is crafted with the finest blooms</p>
+    </div>
+
+    <!-- Filter bar -->
+    <div class="filter-bar reveal">
+      <span class="filter-label">Sort by:</span>
+      <select id="sortSelect">
+        <option value="default">Featured</option>
+        <option value="price-asc">Price: Low to High</option>
+        <option value="price-desc">Price: High to Low</option>
+        <option value="rating">Highest Rated</option>
+        <option value="name">Name A–Z</option>
+      </select>
+      <span class="product-count" id="productCount"></span>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="products-grid" id="productsGrid"></div>
+
+    <!-- Empty state -->
+    <div class="empty-state" id="emptyState" style="display:none;">
+      <div class="empty-icon">🌷</div>
+      <p>No bouquets found. Try a different search or category.</p>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       ABOUT
+  ════════════════════════════════════════ -->
+  <section id="about" class="about-section">
+    <div class="about-inner">
+      <div class="about-text reveal">
+        <p class="section-tag">Our Story</p>
+        <h2 class="section-title" id="aboutTitle">Born from a Love of Flowers</h2>
+        <p class="about-body" id="aboutBody">
+          Amywing's Garden was founded with a single dream — to share the quiet magic of fresh blooms with the world. Every bouquet is hand-crafted by our passionate florists using only the freshest, ethically-sourced flowers. Whether you're celebrating love, achievement, or simply saying "I'm thinking of you," we create arrangements that speak from the heart.
+        </p>
+        <div class="about-stats">
+          <div class="stat-item">
+            <span class="stat-num">2,400+</span>
+            <span class="stat-label">Happy Customers</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">150+</span>
+            <span class="stat-label">Bouquet Designs</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">4.9★</span>
+            <span class="stat-label">Average Rating</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-visual reveal">
+        <div class="about-card glass">
+          <div class="about-card-emoji">💐</div>
+          <p>Every bouquet is wrapped with love and delivered fresh to your door.</p>
+        </div>
+        <div class="about-float f1" aria-hidden="true">🌷</div>
+        <div class="about-float f2" aria-hidden="true">🌸</div>
+        <div class="about-float f3" aria-hidden="true">🌻</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       CONTACT
+  ════════════════════════════════════════ -->
+  <section id="contact" class="contact-section">
+    <div class="section-header reveal">
+      <p class="section-tag">Get in Touch</p>
+      <h2 class="section-title">We'd Love to Hear from You</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="contact-item">
+          <span class="contact-ico">📍</span>
+          <div>
+            <strong>Location</strong>
+            <p id="contactAddress">Davao City, Philippines</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-ico">📱</span>
+          <div>
+            <strong>Phone / Messenger</strong>
+            <p id="contactPhone">+63 912 345 6789</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-ico">📧</span>
+          <div>
+            <strong>Email</strong>
+            <p id="contactEmail">hello@amywingsgarden.com</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-ico">🕐</span>
+          <div>
+            <strong>Hours</strong>
+            <p>Mon–Sat: 8am – 7pm</p>
+          </div>
+        </div>
+      </div>
+      <form class="contact-form glass reveal" id="contactForm">
+        <input type="text"  name="name"    placeholder="Your Name"     required />
+        <input type="email" name="email"   placeholder="Email Address" required />
+        <textarea name="message"           placeholder="Your message…" rows="4" required></textarea>
+        <button type="submit" class="btn-primary">Send Message 🌸</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-icon">🌸</span>
+        <span class="logo-text">Amywing's Garden</span>
+        <p class="footer-tagline" id="footerTagline">Luxury blooms, delivered with love.</p>
+      </div>
+      <div class="footer-links">
+        <strong>Shop</strong>
+        <a href="#products">All Bouquets</a>
+        <a href="#categories">Categories</a>
+        <a href="#" id="footerWishlist">Wishlist</a>
+      </div>
+      <div class="footer-links">
+        <strong>Info</strong>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+        <a href="#" id="adminTrigger" class="admin-secret-link" title="Admin">·</a>
+      </div>
+      <div class="footer-social">
+        <strong>Follow Us</strong>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"  class="social-ico">📘</a>
+          <a href="#" aria-label="Instagram" class="social-ico">📸</a>
+          <a href="#" aria-label="TikTok"    class="social-ico">🎵</a>
+          <a href="#" aria-label="Messenger" class="social-ico">💬</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Amywing's Garden. All rights reserved. Made with 🌸</p>
+    </div>
+  </footer>
+
+  <!-- ════════════════════════════════════════
+       FLOATING CHAT BUTTON
+  ════════════════════════════════════════ -->
+  <button class="chat-fab" id="chatFab" aria-label="Contact us">
+    💬
+    <span class="chat-fab-tooltip">Chat with us!</span>
+  </button>
+
+  <!-- ════════════════════════════════════════
+       TOAST NOTIFICATIONS
+  ════════════════════════════════════════ -->
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+  <!-- ════════════════════════════════════════
+       CART SIDEBAR
+  ════════════════════════════════════════ -->
+  <div class="overlay" id="cartOverlay"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="sidebar-header">
+      <h3>Your Cart 🛒</h3>
+      <button class="close-btn" id="cartClose">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span id="cartTotal">₱0.00</span>
+      </div>
+      <button class="btn-primary full-width" id="checkoutBtn">Proceed to Checkout</button>
+    </div>
+  </aside>
+
+  <!-- ════════════════════════════════════════
+       WISHLIST SIDEBAR
+  ════════════════════════════════════════ -->
+  <div class="overlay" id="wishlistOverlay"></div>
+  <aside class="cart-sidebar wishlist-sidebar" id="wishlistSidebar">
+    <div class="sidebar-header">
+      <h3>Wishlist 💕</h3>
+      <button class="close-btn" id="wishlistClose">✕</button>
+    </div>
+    <div class="cart-items" id="wishlistItems"></div>
+  </aside>
+
+  <!-- ════════════════════════════════════════
+       CHECKOUT MODAL
+  ════════════════════════════════════════ -->
+  <div class="modal-overlay" id="checkoutOverlay">
+    <div class="modal glass" id="checkoutModal">
+      <div class="modal-header">
+        <h3>Complete Your Order 🌸</h3>
+        <button class="close-btn" id="checkoutClose">✕</button>
+      </div>
+      <div class="modal-body">
+        <form id="checkoutForm">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" id="co-name" placeholder="Your full name" required />
+          </div>
+          <div class="form-group">
+            <label>Delivery Address</label>
+            <input type="text" id="co-address" placeholder="Street, Barangay, City" required />
+          </div>
+          <div class="form-group">
+            <label>Contact Number</label>
+            <input type="tel" id="co-phone" placeholder="+63 9XX XXX XXXX" required />
+          </div>
+          <div class="form-group">
+            <label>Bouquet / Order Details</label>
+            <textarea id="co-order" rows="2" placeholder="Which bouquet(s) are you ordering?"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Payment Method</label>
+            <div class="payment-options">
+              <label class="payment-radio">
+                <input type="radio" name="payment" value="Cash on Delivery" checked />
+                <span class="pay-box">💵 Cash on Delivery</span>
+              </label>
+              <label class="payment-radio">
+                <input type="radio" name="payment" value="GCash" />
+                <span class="pay-box">📱 GCash</span>
+              </label>
+            </div>
+          </div>
+          <!-- GCash info (conditional) -->
+          <div class="gcash-info glass" id="gcashInfo" style="display:none;">
+            <p>📱 <strong>GCash Number:</strong> <span id="gcashNumber">0912 345 6789</span></p>
+            <p>Send your payment screenshot to our Messenger after ordering.</p>
+          </div>
+          <!-- Order summary -->
+          <div class="order-summary glass">
+            <h4>Order Summary</h4>
+            <div id="summaryItems"></div>
+            <div class="summary-total">
+              <span>Total:</span>
+              <span id="summaryTotal">₱0.00</span>
+            </div>
+          </div>
+          <div class="modal-actions">
+            <button type="submit" class="btn-primary full-width">Place Order &amp; Contact Seller 🌸</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════
+       PRODUCT DETAIL MODAL
+  ════════════════════════════════════════ -->
+  <div class="modal-overlay" id="productOverlay">
+    <div class="modal glass product-modal" id="productModal">
+      <button class="close-btn" id="productClose">✕</button>
+      <div class="product-modal-inner" id="productModalInner"></div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════
+       ADMIN LOGIN MODAL
+  ════════════════════════════════════════ -->
+  <div class="modal-overlay" id="adminLoginOverlay">
+    <div class="modal glass admin-login-modal" id="adminLoginModal">
+      <div class="modal-header">
+        <h3>🔐 Admin Access</h3>
+        <button class="close-btn" id="adminLoginClose">✕</button>
+      </div>
+      <div class="modal-body">
+        <p style="text-align:center;opacity:.7;margin-bottom:1.5rem;">Enter the admin password to continue.</p>
+        <div class="form-group">
+          <input type="password" id="adminPasswordInput" placeholder="Password" />
+        </div>
+        <div id="adminLoginError" class="admin-error" style="display:none;">Incorrect password. Try again.</div>
+        <button class="btn-primary full-width" id="adminLoginBtn">Login</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════
+       ADMIN PANEL
+  ════════════════════════════════════════ -->
+  <div class="admin-overlay" id="adminPanelOverlay">
+    <div class="admin-panel" id="adminPanel">
+
+      <!-- Admin Sidebar -->
+      <div class="admin-sidebar">
+        <div class="admin-logo">
+          <span>🌸</span> Admin Panel
+        </div>
+        <nav class="admin-nav">
+          <button class="admin-nav-btn active" data-tab="dashboard">📊 Dashboard</button>
+          <button class="admin-nav-btn" data-tab="products">🌹 Products</button>
+          <button class="admin-nav-btn" data-tab="addProduct">➕ Add Product</button>
+          <button class="admin-nav-btn" data-tab="settings">⚙️ Settings</button>
+        </nav>
+        <button class="admin-logout-btn" id="adminLogout">🚪 Logout</button>
+      </div>
+
+      <!-- Admin Content -->
+      <div class="admin-content">
+
+        <!-- ── Dashboard Tab ── -->
+        <div class="admin-tab active" id="tab-dashboard">
+          <h2 class="admin-tab-title">Analytics Dashboard</h2>
+          <div class="analytics-grid">
+            <div class="analytics-card">
+              <div class="an-label">Total Products</div>
+              <div class="an-value" id="an-products">0</div>
+            </div>
+            <div class="analytics-card">
+              <div class="an-label">Total Orders (simulated)</div>
+              <div class="an-value" id="an-orders">142</div>
+            </div>
+            <div class="analytics-card">
+              <div class="an-label">Revenue (simulated)</div>
+              <div class="an-value" id="an-revenue">₱84,500</div>
+            </div>
+            <div class="analytics-card">
+              <div class="an-label">Avg. Rating</div>
+              <div class="an-value" id="an-rating">4.9 ★</div>
+            </div>
+            <div class="analytics-card">
+              <div class="an-label">Wishlist Saves</div>
+              <div class="an-value" id="an-wishlist">0</div>
+            </div>
+            <div class="analytics-card">
+              <div class="an-label">Cart Items</div>
+              <div class="an-value" id="an-cart">0</div>
+            </div>
+          </div>
+          <div class="analytics-chart-wrap">
+            <h3>Monthly Sales (simulated)</h3>
+            <div class="bar-chart" id="barChart"></div>
+          </div>
+        </div>
+
+        <!-- ── Products Tab ── -->
+        <div class="admin-tab" id="tab-products">
+          <h2 class="admin-tab-title">Manage Products</h2>
+          <div id="adminProductList" class="admin-product-list"></div>
+        </div>
+
+        <!-- ── Add Product Tab ── -->
+        <div class="admin-tab" id="tab-addProduct">
+          <h2 class="admin-tab-title" id="addProductTabTitle">Add New Product</h2>
+          <form class="admin-form" id="adminProductForm">
+            <input type="hidden" id="editProductId" />
+            <div class="admin-form-grid">
+              <div class="form-group">
+                <label>Product Name</label>
+                <input type="text" id="ap-name" placeholder="e.g. Scarlet Romance" required />
+              </div>
+              <div class="form-group">
+                <label>Category</label>
+                <select id="ap-category">
+                  <option value="Romantic">Romantic</option>
+                  <option value="Graduation">Graduation</option>
+                  <option value="Tulips">Tulips</option>
+                  <option value="Roses">Roses</option>
+                  <option value="Sunflowers">Sunflowers</option>
+                  <option value="Custom">Custom</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Price (₱)</label>
+                <input type="number" id="ap-price" placeholder="e.g. 1200" min="0" required />
+              </div>
+              <div class="form-group">
+                <label>Stock</label>
+                <input type="number" id="ap-stock" placeholder="e.g. 10" min="0" value="10" />
+              </div>
+              <div class="form-group">
+                <label>Rating (0–5)</label>
+                <input type="number" id="ap-rating" placeholder="e.g. 4.8" min="0" max="5" step="0.1" />
+              </div>
+              <div class="form-group">
+                <label>Reviews Count</label>
+                <input type="number" id="ap-reviews" placeholder="e.g. 24" min="0" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Description</label>
+              <textarea id="ap-desc" rows="3" placeholder="Describe this bouquet…"></textarea>
+            </div>
+            <div class="form-group">
+              <label>Image URL</label>
+              <input type="url" id="ap-image" placeholder="https://…" />
+              <small>Leave blank to use a flower emoji placeholder.</small>
+            </div>
+            <div class="form-group">
+              <label>Emoji Placeholder (if no image)</label>
+              <input type="text" id="ap-emoji" placeholder="e.g. 🌹" maxlength="4" />
+            </div>
+            <div class="admin-form-actions">
+              <button type="submit" class="btn-primary" id="saveProductBtn">Save Product</button>
+              <button type="button" class="btn-ghost" id="cancelEditBtn" style="display:none;">Cancel Edit</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- ── Settings Tab ── -->
+        <div class="admin-tab" id="tab-settings">
+          <h2 class="admin-tab-title">Site Settings</h2>
+          <div class="settings-grid">
+
+            <div class="settings-section">
+              <h3>Branding</h3>
+              <div class="form-group">
+                <label>Logo / Shop Name</label>
+                <input type="text" id="s-logoText" />
+              </div>
+              <div class="form-group">
+                <label>Footer Tagline</label>
+                <input type="text" id="s-tagline" />
+              </div>
+            </div>
+
+            <div class="settings-section">
+              <h3>Homepage Text</h3>
+              <div class="form-group">
+                <label>Hero Title</label>
+                <input type="text" id="s-heroTitle" />
+              </div>
+              <div class="form-group">
+                <label>Hero Subtitle</label>
+                <textarea id="s-heroSub" rows="2"></textarea>
+              </div>
+              <div class="form-group">
+                <label>Hero Eyebrow</label>
+                <input type="text" id="s-heroEyebrow" />
+              </div>
+            </div>
+
+            <div class="settings-section">
+              <h3>About Section</h3>
+              <div class="form-group">
+                <label>About Title</label>
+                <input type="text" id="s-aboutTitle" />
+              </div>
+              <div class="form-group">
+                <label>About Body</label>
+                <textarea id="s-aboutBody" rows="4"></textarea>
+              </div>
+            </div>
+
+            <div class="settings-section">
+              <h3>Contact Info</h3>
+              <div class="form-group">
+                <label>Phone Number (for orders)</label>
+                <input type="tel" id="s-phone" />
+              </div>
+              <div class="form-group">
+                <label>GCash Number</label>
+                <input type="tel" id="s-gcash" />
+              </div>
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" id="s-email" />
+              </div>
+              <div class="form-group">
+                <label>Address</label>
+                <input type="text" id="s-address" />
+              </div>
+            </div>
+
+            <div class="settings-section">
+              <h3>Admin Password</h3>
+              <div class="form-group">
+                <label>New Password</label>
+                <input type="password" id="s-newPassword" placeholder="Enter new password" />
+              </div>
+              <div class="form-group">
+                <label>Confirm Password</label>
+                <input type="password" id="s-confirmPassword" placeholder="Confirm new password" />
+              </div>
+            </div>
+
+          </div>
+          <button class="btn-primary" id="saveSettingsBtn" style="margin-top:1.5rem;">Save All Settings</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
