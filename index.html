@@ -36,9 +36,14 @@
     <div class="nav-container">
 
       <!-- Logo -->
-      <a href="#home" class="nav-logo">
-        <img src="logo.png" alt="Amywing's Garden" style="height:40px;width:auto;object-fit:contain;" />
-        <span class="logo-text" id="logoText">Amywing's Garden</span>
+      <a href="#home" class="nav-logo" id="navLogo">
+        <!-- Logo image (shown when uploaded) -->
+        <img id="logoImg" src="" alt="Amywing's Garden" style="display:none;height:42px;width:auto;object-fit:contain;border-radius:6px;" />
+        <!-- Fallback emoji + text (shown when no logo image) -->
+        <span class="logo-fallback" id="logoFallback">
+          <span class="logo-icon">🌸</span>
+          <span class="logo-text" id="logoText">Amywing's Garden</span>
+        </span>
       </a>
 
       <!-- Desktop Links -->
@@ -103,7 +108,6 @@
        HERO
   ════════════════════════════════════════ -->
   <section id="home" class="hero">
-    <!-- Floating floral decorations -->
     <span class="floral f1" aria-hidden="true">🌸</span>
     <span class="floral f2" aria-hidden="true">🌹</span>
     <span class="floral f3" aria-hidden="true">🌷</span>
@@ -127,7 +131,6 @@
       </div>
     </div>
 
-    <!-- Scroll arrow -->
     <div class="hero-scroll" aria-hidden="true">
       <span>Scroll</span>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
@@ -143,36 +146,14 @@
       <h2 class="section-title" id="categoriesTitle">Our Collections</h2>
       <p class="section-sub" id="categoriesSub">Find the perfect bouquet for every emotion and occasion</p>
     </div>
-
     <div class="categories-grid">
-      <button class="cat-card reveal active" data-cat="All">
-        <div class="cat-icon">💐</div>
-        <span>All Bouquets</span>
-      </button>
-      <button class="cat-card reveal" data-cat="Romantic">
-        <div class="cat-icon">🌹</div>
-        <span>Romantic</span>
-      </button>
-      <button class="cat-card reveal" data-cat="Graduation">
-        <div class="cat-icon">🎓</div>
-        <span>Graduation</span>
-      </button>
-      <button class="cat-card reveal" data-cat="Tulips">
-        <div class="cat-icon">🌷</div>
-        <span>Tulips</span>
-      </button>
-      <button class="cat-card reveal" data-cat="Roses">
-        <div class="cat-icon">🌸</div>
-        <span>Roses</span>
-      </button>
-      <button class="cat-card reveal" data-cat="Sunflowers">
-        <div class="cat-icon">🌻</div>
-        <span>Sunflowers</span>
-      </button>
-      <button class="cat-card reveal" data-cat="Custom">
-        <div class="cat-icon">✨</div>
-        <span>Custom</span>
-      </button>
+      <button class="cat-card reveal active" data-cat="All"><div class="cat-icon">💐</div><span>All Bouquets</span></button>
+      <button class="cat-card reveal" data-cat="Romantic"><div class="cat-icon">🌹</div><span>Romantic</span></button>
+      <button class="cat-card reveal" data-cat="Graduation"><div class="cat-icon">🎓</div><span>Graduation</span></button>
+      <button class="cat-card reveal" data-cat="Tulips"><div class="cat-icon">🌷</div><span>Tulips</span></button>
+      <button class="cat-card reveal" data-cat="Roses"><div class="cat-icon">🌸</div><span>Roses</span></button>
+      <button class="cat-card reveal" data-cat="Sunflowers"><div class="cat-icon">🌻</div><span>Sunflowers</span></button>
+      <button class="cat-card reveal" data-cat="Custom"><div class="cat-icon">✨</div><span>Custom</span></button>
     </div>
   </section>
 
@@ -185,8 +166,6 @@
       <h2 class="section-title">Our Bouquets</h2>
       <p class="section-sub">Each arrangement is crafted with the finest blooms</p>
     </div>
-
-    <!-- Filter bar -->
     <div class="filter-bar reveal">
       <span class="filter-label">Sort by:</span>
       <select id="sortSelect">
@@ -198,11 +177,7 @@
       </select>
       <span class="product-count" id="productCount"></span>
     </div>
-
-    <!-- Product Grid -->
     <div class="products-grid" id="productsGrid"></div>
-
-    <!-- Empty state -->
     <div class="empty-state" id="emptyState" style="display:none;">
       <div class="empty-icon">🌷</div>
       <p>No bouquets found. Try a different search or category.</p>
@@ -218,21 +193,12 @@
         <p class="section-tag">Our Story</p>
         <h2 class="section-title" id="aboutTitle">Born from a Love of Flowers</h2>
         <p class="about-body" id="aboutBody">
-          Amywing's Garden was founded with a single dream — to share the quiet magic of fresh blooms with the world. Every bouquet is hand-crafted by our passionate florists using only the freshest, ethically-sourced flowers. Whether you're celebrating love, achievement, or simply saying "I'm thinking of you," we create arrangements that speak from the heart.
+          Amywing's Garden was founded with a single dream — to share the quiet magic of fresh blooms with the world. Every bouquet is hand-crafted by our passionate florists using only the freshest, ethically-sourced flowers.
         </p>
         <div class="about-stats">
-          <div class="stat-item">
-            <span class="stat-num">2,400+</span>
-            <span class="stat-label">Happy Customers</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-num">150+</span>
-            <span class="stat-label">Bouquet Designs</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-num">4.9★</span>
-            <span class="stat-label">Average Rating</span>
-          </div>
+          <div class="stat-item"><span class="stat-num">2,400+</span><span class="stat-label">Happy Customers</span></div>
+          <div class="stat-item"><span class="stat-num">150+</span><span class="stat-label">Bouquet Designs</span></div>
+          <div class="stat-item"><span class="stat-num">4.9★</span><span class="stat-label">Average Rating</span></div>
         </div>
       </div>
       <div class="about-visual reveal">
@@ -257,34 +223,10 @@
     </div>
     <div class="contact-grid">
       <div class="contact-info reveal">
-        <div class="contact-item">
-          <span class="contact-ico">📍</span>
-          <div>
-            <strong>Location</strong>
-            <p id="contactAddress">Davao City, Philippines</p>
-          </div>
-        </div>
-        <div class="contact-item">
-          <span class="contact-ico">📱</span>
-          <div>
-            <strong>Phone / Messenger</strong>
-            <p id="contactPhone">+63 912 345 6789</p>
-          </div>
-        </div>
-        <div class="contact-item">
-          <span class="contact-ico">📧</span>
-          <div>
-            <strong>Email</strong>
-            <p id="contactEmail">hello@amywingsgarden.com</p>
-          </div>
-        </div>
-        <div class="contact-item">
-          <span class="contact-ico">🕐</span>
-          <div>
-            <strong>Hours</strong>
-            <p>Mon–Sat: 8am – 7pm</p>
-          </div>
-        </div>
+        <div class="contact-item"><span class="contact-ico">📍</span><div><strong>Location</strong><p id="contactAddress">Davao City, Philippines</p></div></div>
+        <div class="contact-item"><span class="contact-ico">📱</span><div><strong>Phone / Messenger</strong><p id="contactPhone">+63 912 345 6789</p></div></div>
+        <div class="contact-item"><span class="contact-ico">📧</span><div><strong>Email</strong><p id="contactEmail">hello@amywingsgarden.com</p></div></div>
+        <div class="contact-item"><span class="contact-ico">🕐</span><div><strong>Hours</strong><p>Mon–Sat: 8am – 7pm</p></div></div>
       </div>
       <form class="contact-form glass reveal" id="contactForm">
         <input type="text"  name="name"    placeholder="Your Name"     required />
@@ -301,8 +243,14 @@
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <span class="logo-icon">🌸</span>
-        <span class="logo-text">Amywing's Garden</span>
+        <!-- Footer Logo -->
+        <a href="#home" class="nav-logo footer-logo-link">
+          <img id="footerLogoImg" src="" alt="Amywing's Garden" style="display:none;height:38px;width:auto;object-fit:contain;border-radius:6px;" />
+          <span class="footer-logo-fallback" id="footerLogoFallback">
+            <span class="logo-icon">🌸</span>
+            <span class="logo-text">Amywing's Garden</span>
+          </span>
+        </a>
         <p class="footer-tagline" id="footerTagline">Luxury blooms, delivered with love.</p>
       </div>
       <div class="footer-links">
@@ -333,7 +281,7 @@
   </footer>
 
   <!-- ════════════════════════════════════════
-       FLOATING CHAT BUTTON
+       FLOATING CHAT FAB
   ════════════════════════════════════════ -->
   <button class="chat-fab" id="chatFab" aria-label="Contact us">
     💬
@@ -341,7 +289,7 @@
   </button>
 
   <!-- ════════════════════════════════════════
-       TOAST NOTIFICATIONS
+       TOAST
   ════════════════════════════════════════ -->
   <div id="toastContainer" class="toast-container" aria-live="polite"></div>
 
@@ -356,10 +304,7 @@
     </div>
     <div class="cart-items" id="cartItems"></div>
     <div class="cart-footer">
-      <div class="cart-total">
-        <span>Total:</span>
-        <span id="cartTotal">₱0.00</span>
-      </div>
+      <div class="cart-total"><span>Total:</span><span id="cartTotal">₱0.00</span></div>
       <button class="btn-primary full-width" id="checkoutBtn">Proceed to Checkout</button>
     </div>
   </aside>
@@ -387,48 +332,25 @@
       </div>
       <div class="modal-body">
         <form id="checkoutForm">
-          <div class="form-group">
-            <label>Full Name</label>
-            <input type="text" id="co-name" placeholder="Your full name" required />
-          </div>
-          <div class="form-group">
-            <label>Delivery Address</label>
-            <input type="text" id="co-address" placeholder="Street, Barangay, City" required />
-          </div>
-          <div class="form-group">
-            <label>Contact Number</label>
-            <input type="tel" id="co-phone" placeholder="+63 9XX XXX XXXX" required />
-          </div>
-          <div class="form-group">
-            <label>Bouquet / Order Details</label>
-            <textarea id="co-order" rows="2" placeholder="Which bouquet(s) are you ordering?"></textarea>
-          </div>
+          <div class="form-group"><label>Full Name</label><input type="text" id="co-name" placeholder="Your full name" required /></div>
+          <div class="form-group"><label>Delivery Address</label><input type="text" id="co-address" placeholder="Street, Barangay, City" required /></div>
+          <div class="form-group"><label>Contact Number</label><input type="tel" id="co-phone" placeholder="+63 9XX XXX XXXX" required /></div>
+          <div class="form-group"><label>Bouquet / Order Details</label><textarea id="co-order" rows="2" placeholder="Which bouquet(s) are you ordering?"></textarea></div>
           <div class="form-group">
             <label>Payment Method</label>
             <div class="payment-options">
-              <label class="payment-radio">
-                <input type="radio" name="payment" value="Cash on Delivery" checked />
-                <span class="pay-box">💵 Cash on Delivery</span>
-              </label>
-              <label class="payment-radio">
-                <input type="radio" name="payment" value="GCash" />
-                <span class="pay-box">📱 GCash</span>
-              </label>
+              <label class="payment-radio"><input type="radio" name="payment" value="Cash on Delivery" checked /><span class="pay-box">💵 Cash on Delivery</span></label>
+              <label class="payment-radio"><input type="radio" name="payment" value="GCash" /><span class="pay-box">📱 GCash</span></label>
             </div>
           </div>
-          <!-- GCash info (conditional) -->
           <div class="gcash-info glass" id="gcashInfo" style="display:none;">
             <p>📱 <strong>GCash Number:</strong> <span id="gcashNumber">0912 345 6789</span></p>
             <p>Send your payment screenshot to our Messenger after ordering.</p>
           </div>
-          <!-- Order summary -->
           <div class="order-summary glass">
             <h4>Order Summary</h4>
             <div id="summaryItems"></div>
-            <div class="summary-total">
-              <span>Total:</span>
-              <span id="summaryTotal">₱0.00</span>
-            </div>
+            <div class="summary-total"><span>Total:</span><span id="summaryTotal">₱0.00</span></div>
           </div>
           <div class="modal-actions">
             <button type="submit" class="btn-primary full-width">Place Order &amp; Contact Seller 🌸</button>
@@ -459,9 +381,7 @@
       </div>
       <div class="modal-body">
         <p style="text-align:center;opacity:.7;margin-bottom:1.5rem;">Enter the admin password to continue.</p>
-        <div class="form-group">
-          <input type="password" id="adminPasswordInput" placeholder="Password" />
-        </div>
+        <div class="form-group"><input type="password" id="adminPasswordInput" placeholder="Password" /></div>
         <div id="adminLoginError" class="admin-error" style="display:none;">Incorrect password. Try again.</div>
         <button class="btn-primary full-width" id="adminLoginBtn">Login</button>
       </div>
@@ -476,9 +396,7 @@
 
       <!-- Admin Sidebar -->
       <div class="admin-sidebar">
-        <div class="admin-logo">
-          <span>🌸</span> Admin Panel
-        </div>
+        <div class="admin-logo"><span>🌸</span> Admin Panel</div>
         <nav class="admin-nav">
           <button class="admin-nav-btn active" data-tab="dashboard">📊 Dashboard</button>
           <button class="admin-nav-btn" data-tab="products">🌹 Products</button>
@@ -495,30 +413,12 @@
         <div class="admin-tab active" id="tab-dashboard">
           <h2 class="admin-tab-title">Analytics Dashboard</h2>
           <div class="analytics-grid">
-            <div class="analytics-card">
-              <div class="an-label">Total Products</div>
-              <div class="an-value" id="an-products">0</div>
-            </div>
-            <div class="analytics-card">
-              <div class="an-label">Total Orders (simulated)</div>
-              <div class="an-value" id="an-orders">142</div>
-            </div>
-            <div class="analytics-card">
-              <div class="an-label">Revenue (simulated)</div>
-              <div class="an-value" id="an-revenue">₱84,500</div>
-            </div>
-            <div class="analytics-card">
-              <div class="an-label">Avg. Rating</div>
-              <div class="an-value" id="an-rating">4.9 ★</div>
-            </div>
-            <div class="analytics-card">
-              <div class="an-label">Wishlist Saves</div>
-              <div class="an-value" id="an-wishlist">0</div>
-            </div>
-            <div class="analytics-card">
-              <div class="an-label">Cart Items</div>
-              <div class="an-value" id="an-cart">0</div>
-            </div>
+            <div class="analytics-card"><div class="an-label">Total Products</div><div class="an-value" id="an-products">0</div></div>
+            <div class="analytics-card"><div class="an-label">Total Orders (simulated)</div><div class="an-value" id="an-orders">142</div></div>
+            <div class="analytics-card"><div class="an-label">Revenue (simulated)</div><div class="an-value" id="an-revenue">₱84,500</div></div>
+            <div class="analytics-card"><div class="an-label">Avg. Rating</div><div class="an-value" id="an-rating">4.9 ★</div></div>
+            <div class="analytics-card"><div class="an-label">Wishlist Saves</div><div class="an-value" id="an-wishlist">0</div></div>
+            <div class="analytics-card"><div class="an-label">Cart Items</div><div class="an-value" id="an-cart">0</div></div>
           </div>
           <div class="analytics-chart-wrap">
             <h3>Monthly Sales (simulated)</h3>
@@ -538,12 +438,8 @@
           <form class="admin-form" id="adminProductForm">
             <input type="hidden" id="editProductId" />
             <div class="admin-form-grid">
-              <div class="form-group">
-                <label>Product Name</label>
-                <input type="text" id="ap-name" placeholder="e.g. Scarlet Romance" required />
-              </div>
-              <div class="form-group">
-                <label>Category</label>
+              <div class="form-group"><label>Product Name</label><input type="text" id="ap-name" placeholder="e.g. Scarlet Romance" required /></div>
+              <div class="form-group"><label>Category</label>
                 <select id="ap-category">
                   <option value="Romantic">Romantic</option>
                   <option value="Graduation">Graduation</option>
@@ -553,36 +449,27 @@
                   <option value="Custom">Custom</option>
                 </select>
               </div>
-              <div class="form-group">
-                <label>Price (₱)</label>
-                <input type="number" id="ap-price" placeholder="e.g. 1200" min="0" required />
-              </div>
-              <div class="form-group">
-                <label>Stock</label>
-                <input type="number" id="ap-stock" placeholder="e.g. 10" min="0" value="10" />
-              </div>
-              <div class="form-group">
-                <label>Rating (0–5)</label>
-                <input type="number" id="ap-rating" placeholder="e.g. 4.8" min="0" max="5" step="0.1" />
-              </div>
-              <div class="form-group">
-                <label>Reviews Count</label>
-                <input type="number" id="ap-reviews" placeholder="e.g. 24" min="0" />
-              </div>
+              <div class="form-group"><label>Price (₱)</label><input type="number" id="ap-price" placeholder="e.g. 1200" min="0" required /></div>
+              <div class="form-group"><label>Stock</label><input type="number" id="ap-stock" placeholder="e.g. 10" min="0" value="10" /></div>
+              <div class="form-group"><label>Rating (0–5)</label><input type="number" id="ap-rating" placeholder="e.g. 4.8" min="0" max="5" step="0.1" /></div>
+              <div class="form-group"><label>Reviews Count</label><input type="number" id="ap-reviews" placeholder="e.g. 24" min="0" /></div>
             </div>
+            <div class="form-group"><label>Description</label><textarea id="ap-desc" rows="3" placeholder="Describe this bouquet…"></textarea></div>
+            <div class="form-group"><label>Image URL</label><input type="url" id="ap-image" placeholder="https://…" /><small>Or upload an image below.</small></div>
             <div class="form-group">
-              <label>Description</label>
-              <textarea id="ap-desc" rows="3" placeholder="Describe this bouquet…"></textarea>
+              <label>Upload Product Image</label>
+              <div class="upload-box" id="apImageUploadBox">
+                <input type="file" id="ap-image-file" accept="image/*" style="display:none;" />
+                <div class="upload-box-inner" id="apImageUploadInner">
+                  <span class="upload-icon">📷</span>
+                  <span>Click to upload product image</span>
+                  <small>JPG, PNG, WEBP — max 2MB</small>
+                </div>
+                <img id="apImagePreview" src="" alt="Preview" style="display:none;max-height:120px;border-radius:8px;margin-top:.5rem;" />
+                <button type="button" class="remove-upload-btn" id="apRemoveImage" style="display:none;">✕ Remove image</button>
+              </div>
             </div>
-            <div class="form-group">
-              <label>Image URL</label>
-              <input type="url" id="ap-image" placeholder="https://…" />
-              <small>Leave blank to use a flower emoji placeholder.</small>
-            </div>
-            <div class="form-group">
-              <label>Emoji Placeholder (if no image)</label>
-              <input type="text" id="ap-emoji" placeholder="e.g. 🌹" maxlength="4" />
-            </div>
+            <div class="form-group"><label>Emoji Placeholder (if no image)</label><input type="text" id="ap-emoji" placeholder="e.g. 🌹" maxlength="4" /></div>
             <div class="admin-form-actions">
               <button type="submit" class="btn-primary" id="saveProductBtn">Save Product</button>
               <button type="button" class="btn-ghost" id="cancelEditBtn" style="display:none;">Cancel Edit</button>
@@ -595,10 +482,47 @@
           <h2 class="admin-tab-title">Site Settings</h2>
           <div class="settings-grid">
 
-            <div class="settings-section">
-              <h3>Branding</h3>
+            <!-- LOGO UPLOAD SECTION -->
+            <div class="settings-section logo-upload-section">
+              <h3>🌸 Logo / Branding</h3>
+
+              <!-- Current Logo Preview -->
+              <div class="logo-preview-wrap" id="logoPreviewWrap">
+                <p class="logo-preview-label">Current Logo:</p>
+                <div class="logo-preview-box" id="logoPreviewBox">
+                  <span id="logoPreviewFallback">🌸 Amywing's Garden</span>
+                  <img id="logoPreviewImg" src="" alt="Logo" style="display:none;max-height:60px;border-radius:8px;" />
+                </div>
+              </div>
+
+              <!-- Upload New Logo -->
+              <div class="form-group" style="margin-top:1rem;">
+                <label>Upload Logo Image</label>
+                <div class="upload-box" id="logoUploadBox">
+                  <input type="file" id="logoFileInput" accept="image/*" style="display:none;" />
+                  <div class="upload-box-inner" id="logoUploadInner">
+                    <span class="upload-icon">🖼️</span>
+                    <span>Click to upload your logo</span>
+                    <small>PNG with transparent background recommended · Max 2MB</small>
+                  </div>
+                  <img id="logoUploadPreview" src="" alt="Logo Preview" style="display:none;max-height:70px;border-radius:8px;margin-top:.5rem;" />
+                </div>
+              </div>
+
+              <div class="logo-upload-actions" id="logoUploadActions" style="display:none;">
+                <button type="button" class="btn-primary" id="saveLogoBtn">✅ Save Logo</button>
+                <button type="button" class="btn-ghost"    id="cancelLogoBtn">Cancel</button>
+                <button type="button" class="btn-ghost"    id="removeLogoBtn" style="color:#e05;border-color:#ffc9c9;">🗑 Remove Logo</button>
+              </div>
+
+              <div class="form-group" style="margin-top:1rem;">
+                <label>Or enter a logo image URL</label>
+                <input type="url" id="s-logoUrl" placeholder="https://yoursite.com/logo.png" />
+                <small>Leave blank to use the text logo below.</small>
+              </div>
+
               <div class="form-group">
-                <label>Logo / Shop Name</label>
+                <label>Shop Name (text logo)</label>
                 <input type="text" id="s-logoText" />
               </div>
               <div class="form-group">
@@ -607,73 +531,44 @@
               </div>
             </div>
 
+            <!-- HOMEPAGE TEXT -->
             <div class="settings-section">
               <h3>Homepage Text</h3>
-              <div class="form-group">
-                <label>Hero Title</label>
-                <input type="text" id="s-heroTitle" />
-              </div>
-              <div class="form-group">
-                <label>Hero Subtitle</label>
-                <textarea id="s-heroSub" rows="2"></textarea>
-              </div>
-              <div class="form-group">
-                <label>Hero Eyebrow</label>
-                <input type="text" id="s-heroEyebrow" />
-              </div>
+              <div class="form-group"><label>Hero Eyebrow</label><input type="text" id="s-heroEyebrow" /></div>
+              <div class="form-group"><label>Hero Title</label><input type="text" id="s-heroTitle" /></div>
+              <div class="form-group"><label>Hero Subtitle</label><textarea id="s-heroSub" rows="2"></textarea></div>
             </div>
 
+            <!-- ABOUT -->
             <div class="settings-section">
               <h3>About Section</h3>
-              <div class="form-group">
-                <label>About Title</label>
-                <input type="text" id="s-aboutTitle" />
-              </div>
-              <div class="form-group">
-                <label>About Body</label>
-                <textarea id="s-aboutBody" rows="4"></textarea>
-              </div>
+              <div class="form-group"><label>About Title</label><input type="text" id="s-aboutTitle" /></div>
+              <div class="form-group"><label>About Body</label><textarea id="s-aboutBody" rows="4"></textarea></div>
             </div>
 
+            <!-- CONTACT -->
             <div class="settings-section">
               <h3>Contact Info</h3>
-              <div class="form-group">
-                <label>Phone Number (for orders)</label>
-                <input type="tel" id="s-phone" />
-              </div>
-              <div class="form-group">
-                <label>GCash Number</label>
-                <input type="tel" id="s-gcash" />
-              </div>
-              <div class="form-group">
-                <label>Email</label>
-                <input type="email" id="s-email" />
-              </div>
-              <div class="form-group">
-                <label>Address</label>
-                <input type="text" id="s-address" />
-              </div>
+              <div class="form-group"><label>Phone Number (for orders)</label><input type="tel" id="s-phone" /></div>
+              <div class="form-group"><label>GCash Number</label><input type="tel" id="s-gcash" /></div>
+              <div class="form-group"><label>Email</label><input type="email" id="s-email" /></div>
+              <div class="form-group"><label>Address</label><input type="text" id="s-address" /></div>
             </div>
 
+            <!-- PASSWORD -->
             <div class="settings-section">
               <h3>Admin Password</h3>
-              <div class="form-group">
-                <label>New Password</label>
-                <input type="password" id="s-newPassword" placeholder="Enter new password" />
-              </div>
-              <div class="form-group">
-                <label>Confirm Password</label>
-                <input type="password" id="s-confirmPassword" placeholder="Confirm new password" />
-              </div>
+              <div class="form-group"><label>New Password</label><input type="password" id="s-newPassword" placeholder="Enter new password" /></div>
+              <div class="form-group"><label>Confirm Password</label><input type="password" id="s-confirmPassword" placeholder="Confirm new password" /></div>
             </div>
 
           </div>
           <button class="btn-primary" id="saveSettingsBtn" style="margin-top:1.5rem;">Save All Settings</button>
         </div>
 
-      </div>
-    </div>
-  </div>
+      </div><!-- /admin-content -->
+    </div><!-- /admin-panel -->
+  </div><!-- /admin-overlay -->
 
   <script src="script.js"></script>
 </body>
